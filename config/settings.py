@@ -9,28 +9,8 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-<<<<<<< HEAD
-
-=======
-import os
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
-SECRET_KEY = 'k6(noi=w2v29d(d2lf2v6t)3292@icm)3v0==)r7286^k^37=!'
-=======
-SECRET_KEY = 'r*5e7o6-kmn593!f#%9qwhdw1ghay2i&o6wlxi_14oz4nj1-vw'
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -63,12 +43,10 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-        'DIRS': [BASE_DIR, 'templates'],
-=======
+
         #'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'DIRS': [BASE_DIR, 'templates'], # Django 3.x
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,11 +54,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-<<<<<<< HEAD
-=======
 
 
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
+
             ],
         },
     },
@@ -137,9 +113,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
