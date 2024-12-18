@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 {% load static %}
+=======
+>>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <title>설문조사 목록(index)</title>
     {%  load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
@@ -20,5 +24,24 @@
  {% else %}
     <p>No polls are available.</p>
  {% endif %}
+=======
+    <title>Title</title>
+</head>
+<body>
+{% if latest_question_list %}
+
+    <ul>
+        {% for question in latest_question_list %}
+            <li> <a href="/polls/{{question.id}} />">{{question.question_text}}</a> </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+>>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
 </body>
 </html>
