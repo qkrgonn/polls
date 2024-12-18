@@ -1,0 +1,46 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    <title>Poll Detail</title>
+</head>
+<body>
+ <h1>{{question.question_text}}</h1>
+ {% if error_message%} <p> <strong>{{error_message}}</strong></p>{% endif%}
+
+ <form action= "{% url 'polls:vote' question.id %}" method="post">
+ {% csrf_token%}
+ {% for choice in question.choice_set.all%}
+    <input type="radio" name="choice" id="choice{{forloop.counter}}" value="{{choice.id}}">
+    <label for="choice{{forloop.counter}}">{{choice.choice_text}}</label><br>
+ {% endfor%}
+ <input type="submit" value="Vote">
+ </form>
+</body>
+</html>
+
+
+<!--
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    <title>Poll Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Results for: {{ question.question_text }}</h1>
+        <ul>
+            {% for choice in question.choice_set.all %}
+                <li>{{ choice.choice_text }}: {{ choice.votes }} vote(s)</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'polls:index' %}">
+            <button>Back to Polls</button>
+        </a>
+    </div>
+</body>
+</html>
+-->
