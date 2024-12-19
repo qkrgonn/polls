@@ -1,58 +1,23 @@
-<<<<<<< HEAD
-<!--
-=======
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<<<<<<< HEAD
-    <title>설문조사 앱 결과(result)</title>
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
-<h1>{{question.question_text}}</h1>
- <ul>
-     {% for choice in question.choice_set.all %}
-    <li>{{choice.choice_text}} -- {{choice.votes}} vote{{choice.votes|pluralize}}</li>
-    {% endfor %}
- </ul>
- <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+
+<div class="poll-results-container">
+    <h1>{{ question.question_text }}</h1>
+    <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'polls:vote' question.id %}">투표를 다시 하시겠습니까?</a>
+</div>
 
 </body>
 </html>
--->
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-    <title>Poll Results</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Results for: {{ question.question_text }}</h1>
-        <ul>
-            {% for choice in question.choice_set.all %}
-                <li>{{ choice.choice_text }}: {{ choice.votes }} vote(s)</li>
-            {% endfor %}
-        </ul>
-        <a href="{% url 'polls:index' %}">
-            <button>Back to Polls</button>
-        </a>
-    </div>
-</body>
-</html>
-=======
-    <title>Title</title>
-</head>
-<body>
-  <h1>{{question.question_text}}</h1>
-    <ul>
-    {% for choice in question.choice_set.all %}
-    <li>{{choice.choice_text}} -- {{choice.votes}} vote{{choice.votes|pluralize}}</li>
-    {% endfor %}
-    </ul>
-      <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
-</body>
-</html>0                   e
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d

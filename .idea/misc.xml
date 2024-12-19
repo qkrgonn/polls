@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-<<<<<<< HEAD
     <option name="sdkName" value="C:\Users\PC\anaconda3\envs\vnv_dj" />
   </component>
-=======
-    <option name="sdkName" value="vnv_dj" />
-  </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="vnv_dj" project-jdk-type="Python SDK" />
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
 </project>

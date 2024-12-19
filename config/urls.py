@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 """config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,15 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
- ]
-=======
 ]
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d

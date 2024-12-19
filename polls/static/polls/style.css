@@ -1,112 +1,175 @@
 body {
-<<<<<<< HEAD
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    background-image: url('images/vote.jpg');
-    background-size: cover;
-    background-position: center;
-    color: rgba(53, 50, 50, 0.8);
-    min-height: 100vh;
-    background-attachment: fixed;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #202124;
+  position: relative; 
+  height: 100vh; 
 }
 
+body::after {
+  content: "";
+  background: url("images/vote.png") no-repeat center center; 
+  background-size: cover; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; 
+  opacity: 0.1; 
+}
 
 .container {
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+  max-width: 800px;
+  margin: 50px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-top: 5px solid #4285f4;
+  text-align: center; 
 }
 
-.container:hover {
-    transform: scale(1.03);
+.container h1 {
+  font-size: 1.8em;
+  color: #4285f4; 
+  margin-bottom: 20px;
 }
 
-
-h1, h2, h3 {
-    color: #fff;
-    font-weight: 600;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+.container p {
+  font-size: 1em;
+  color: #5f6368; 
+  margin-bottom: 30px;
 }
-
-a {
-    color: #2b2626;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-    color: #1e90ff;
-    transform: translateY(-2px);
-}
-
-button, .btn {
-    background-color: #fff;
-    color: #000;
-    border: none;
-    padding: 12px 25px;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-button:hover, .btn:hover {
-    background-color: #f0f0f0;
-    color: #000;
-    transform: translateY(-3px);
-}
-
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding: 12px 20px;
+  margin: 10px;
+  list-style: none; 
 }
 
-li {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-li:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-
-@media (max-width: 768px) {
-    .container {
-        margin: 40px;
-        padding: 30px;
-    }
-
-    button, .btn {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-=======
-    background: white url("images/background.png") no-repeat;
-    background-position: right bottom;
-}
 li a {
-    color: green;
->>>>>>> d93dcd757aa16030377cf7fbdc0c23a154f4442d
+  display: block;
+  background: #e8f0fe; 
+  color: #202124;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 12px 20px;
+  margin: 10px;
+  width: 300px; 
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-align: center; 
+}
+
+li a:hover {
+  background: #4285f4; 
+  color: #ffffff; 
+}
+
+.poll-detail-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.poll-detail-container h1 {
+  font-size: 1.8em;
+  color: #4285f4;
+}
+
+input[type="radio"] {
+  display: none; 
+}
+
+label {
+  display: inline-block;
+  background: #e8f0fe; 
+  color: #202124;
+  font-size: 1em;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin: 5px 0; 
+}
+
+input[type="radio"]:checked + label,
+label:hover {
+  background: #4285f4; 
+  color: #fff; 
+}
+
+input[type="radio"]:checked + label {
+  background: #4285f4; 
+  color: #fff;
+}
+
+input[type="submit"] {
+  background: #4285f4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #3367d6;
+}
+
+.poll-results-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.poll-results-container ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.poll-results-container li {
+  font-size: 1.2em;
+  margin: 15px 0;
+  background-color: #e8f0fe; 
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.poll-results-container li:hover {
+  background-color: #4285f4; 
+  color: #fff; 
+  transform: scale(1.05); 
+}
+
+.poll-results-container a {
+  display: inline-block;
+  background-color: #4285f4; 
+  color: white;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.poll-results-container a:hover {
+  background-color: #3367d6; 
+  transform: scale(1.05); 
 }
